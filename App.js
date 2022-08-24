@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StatusBar} from 'expo-status-bar';
+import React, {Component} from 'react';
+import {ScrollView, Text, View} from 'react-native';
+import {TailwindProvider} from 'tailwindcss-react-native';
+import SignIn from "./src/screens/signIn";
+import {MyContext} from './src/context';
+import HomeScreen from "./src/screens/homeScreen";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends Component {
+    static contextType = MyContext;
+    render() {
+        return (
+            <TailwindProvider>
+                <SignIn></SignIn>
+            </TailwindProvider>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
+
