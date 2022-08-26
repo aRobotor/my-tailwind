@@ -7,8 +7,8 @@ const SubmitButton = ({title, handleSubmit, loading}) => (
     <TailwindProvider>
         <TouchableOpacity className="
         bg-orange-500
-        h-15
-        w-20
+        h-12
+
         items-center
         justify-center
         mb-10
