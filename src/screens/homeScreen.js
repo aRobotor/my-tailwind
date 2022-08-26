@@ -1,19 +1,19 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
+import {Button, ScrollView, Text, View} from 'react-native';
 import { TailwindProvider } from 'tailwindcss-react-native';
 
 const HomeScreen = ({navigation}) => {
     return (
             <>
                 <TailwindProvider>
-                    <View>
+                    <ScrollView className="">
                         <Text> Welcome on your dashboard</Text>
                         <Button
                             title={"Sign In"}
                             onPress={() =>
                         navigation.navigate('SignIn')}
                         />
-                    </View>
+                    </ScrollView>
                 </TailwindProvider>
             </>
         );
