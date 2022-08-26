@@ -1,18 +1,25 @@
-import {StatusBar} from 'expo-status-bar';
+
 import React, {Component} from 'react';
-import {ScrollView, Text, View} from 'react-native';
-import {TailwindProvider} from 'tailwindcss-react-native';
 import SignIn from "./src/screens/signIn";
-import {MyContext} from './src/context';
 import HomeScreen from "./src/screens/homeScreen";
+import {NavigationContainer} from "@react-navigation/native";
+import {createNativeStackNavigator} from "@react-navigation/native-stack";
+
+
+const Stack = createNativeStackNavigator();
+
 
 class App extends Component {
-    static contextType = MyContext;
+    // static contextType = MyContext;
     render() {
         return (
-            <TailwindProvider>
-                <SignIn></SignIn>
-            </TailwindProvider>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="SignIn" component={SignIn} />
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                </Stack.Navigator>
+            </NavigationContainer>
+
         );
     }
 }

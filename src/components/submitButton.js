@@ -17,14 +17,6 @@ const SubmitButton = ({title, handleSubmit, loading}) => (
         rounded-full
         "
             onPress={handleSubmit}
-            // style={{
-            //     backgroundColor: "#ff9900",
-            //     height: 50,
-            //     justifyContent: "center",
-            //     marginBottom: 20,
-            //     marginHorizontal: 10,
-            //     borderRadius: 24,
-            // }}
         >
 
             <Text className=""> {

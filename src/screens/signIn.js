@@ -1,11 +1,9 @@
-import React, {useContext, useState} from 'react';
-import { Text, View } from 'react-native';
+import React, { useState} from 'react';
+import {ScrollView, Text, View} from 'react-native';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import SubmitButton from "../components/submitButton";
-import {MyContext} from "../context";
 
-const SignIn = () => {
-    const context = useContext(MyContext);
+const SignIn = ({ navigation }) => {
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async () => {
@@ -13,16 +11,18 @@ const SignIn = () => {
         alert('Hey du, was machst du da?!')
         setLoading(false)
 
-
     }
-
     return(
         <>
             <TailwindProvider>
-                <View className="flex-1 items-center justify-center">
-                    <Text>Here speaks the Sign In Page</Text>
+                <ScrollView>
+                <View className="flex-1 items-center ">
+                    <Text className="text-xl font-bold"
+                    >Here speaks the Sign In Page</Text>
                     <SubmitButton title="Login" handleSubmit={handleSubmit} loading={loading}/>
+                    <SubmitButton title="Change Screen" handleSubmit={()=> navigation.navigate('Home')} loading={loading}/>
                 </View>
+                </ScrollView>
             </TailwindProvider>
         </>
     )
