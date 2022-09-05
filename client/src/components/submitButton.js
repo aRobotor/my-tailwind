@@ -7,8 +7,7 @@ const SubmitButton = ({title, handleSubmit, loading}) => (
     <TailwindProvider>
         <TouchableOpacity className="
         bg-orange-500
-        h-15
-        w-20
+        h-12
         items-center
         justify-center
         mb-10
@@ -17,14 +16,6 @@ const SubmitButton = ({title, handleSubmit, loading}) => (
         rounded-full
         "
             onPress={handleSubmit}
-            // style={{
-            //     backgroundColor: "#ff9900",
-            //     height: 50,
-            //     justifyContent: "center",
-            //     marginBottom: 20,
-            //     marginHorizontal: 10,
-            //     borderRadius: 24,
-            // }}
         >
 
             <Text className=""> {
