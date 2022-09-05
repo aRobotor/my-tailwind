@@ -8,7 +8,6 @@ const SubmitButton = ({title, handleSubmit, loading}) => (
         <TouchableOpacity className="
         bg-orange-500
         h-12
-
         items-center
         justify-center
         mb-10
